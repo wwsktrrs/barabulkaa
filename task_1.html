@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обчислення площі трикутника</title>
+    <script>
+        function calculateArea() {
+            let base = parseFloat(document.getElementById("base").value);
+            let height = parseFloat(document.getElementById("height").value);
+            if (isNaN(base) || isNaN(height) || base <= 0 || height <= 0) {
+                alert("Будь ласка, введіть коректні значення!");
+                return;
+            }
+            let area = (base * height) / 2;
+            document.getElementById("result").innerText = "Площа трикутника: " + area.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Обчислення площі прямокутного трикутника</h2>
+    <label for="base">Основа (см):</label>
+    <input type="number" id="base"><br><br>
+    <label for="height">Висота (см):</label>
+    <input type="number" id="height"><br><br>
+    <button onclick="calculateArea()">Обчислити</button>
+    <p id="result"></p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація в MySoc</title>
+</head>
+<body>
+    <h2>Реєстрація в MySoc</h2>
+    <form>
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required><br><br>
+
+        <label>Стать:</label>
+        <input type="radio" name="gender" value="male"> Чоловіча
+        <input type="radio" name="gender" value="female"> Жіноча<br><br>
+
+        <label for="birthdate">Дата народження:</label>
+        <input type="date" id="birthdate"><br><br>
+
+        <label for="country">Країна:</label>
+        <select id="country">
+            <option value="Ukraine">Україна</option>
+            <option value="Poland">Польща</option>
+            <option value="Germany">Німеччина</option>
+        </select><br><br>
+
+        <button type="submit">Зареєструватися</button>
+    </form>
+</body>
+</html>
+
+
